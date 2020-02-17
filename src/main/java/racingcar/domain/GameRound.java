@@ -5,7 +5,7 @@ public class GameRound {
     private static final int ZERO = 0;
     private int gameRound;
 
-    int getGameRound() {
+    public int getGameRound() {
         return gameRound;
     }
 

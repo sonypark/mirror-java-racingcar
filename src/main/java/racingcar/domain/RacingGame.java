@@ -4,8 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import racingcar.utils.RandomNumber;
-import racingcar.utils.StringUtils;
-import racingcar.view.InputView;
 
 public class RacingGame {
 
@@ -37,26 +35,6 @@ public class RacingGame {
     private static void checkNameNull(String[] carNames) {
         if (carNames.length == ZERO) {
             throw new IllegalArgumentException("자동차 이름이 없습니다.");
-        }
-    }
-
-    public static String[] generateRacingCarNames() {
-        try {
-            String input = InputView.inputCarNames();
-            return StringUtils.splitInputName(input);
-        } catch (IllegalArgumentException e) {
-            System.out.println(e.getMessage());
-            return generateRacingCarNames();
-        }
-    }
-
-    public static int generateGameRound() {
-        try {
-            GameRound gameRound = new GameRound(InputView.inputGameRound());
-            return gameRound.getGameRound();
-        } catch (IllegalArgumentException e) {
-            System.out.println(e.getMessage());
-            return generateGameRound();
         }
     }
 

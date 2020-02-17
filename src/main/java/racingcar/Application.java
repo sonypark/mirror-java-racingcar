@@ -3,6 +3,7 @@ package racingcar;
 import java.util.List;
 
 import racingcar.controller.RacingStadium;
+import racingcar.controller.ViewController;
 import racingcar.domain.Car;
 import racingcar.domain.RacingGame;
 import racingcar.domain.Winner;
@@ -15,9 +16,9 @@ public class Application {
 
     private static void runApplication() {
         try {
-            final String[] inputCarNames = RacingGame.generateRacingCarNames();
+            final String[] inputCarNames = ViewController.generateRacingCarNames();
             final List<Car> racingCars = RacingGame.generateCars(inputCarNames);
-            final int GameRound = RacingGame.generateGameRound();
+            final int GameRound = ViewController.generateGameRound();
 
             RacingGame racingGame = new RacingGame(racingCars);
             RacingStadium racingStadium = new RacingStadium();
