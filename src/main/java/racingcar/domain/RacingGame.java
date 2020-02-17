@@ -13,6 +13,7 @@ public class RacingGame {
     private List<Car> racingCars;
 
     public RacingGame(List<Car> racingCars) {
+        // 검증 로직 구현
         this.racingCars = racingCars;
     }
 
